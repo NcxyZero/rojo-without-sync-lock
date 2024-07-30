@@ -408,7 +408,7 @@ function App:useRunningConnectionInfo()
 end
 
 function App:startSession()
-	local syncLockEnabled = Settings:get("SyncLock")
+	local syncLockEnabled = Settings:get("syncLock")
 
 	if syncLockEnabled then
 		local claimedLock, priorOwner = self:claimSyncLock()
