@@ -110,6 +110,14 @@ function SettingsPage:render()
 				layoutOrder = layoutIncrement(),
 			}),
 
+			SyncLock = e(Setting, {
+				id = "syncLock",
+				name = "Sync Lock",
+				description = "Toggle sync lock",
+				transparency = self.props.transparency,
+				layoutOrder = layoutIncrement()
+			}),
+
 			ConfirmationBehavior = e(Setting, {
 				id = "confirmationBehavior",
 				name = "Confirmation Behavior",

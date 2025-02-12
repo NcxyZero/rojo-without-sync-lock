@@ -343,6 +343,10 @@ function App:isSyncLockAvailable()
 		return true
 	end
 
+	if not Settings:get("syncLock") then
+		return true
+	end
+
 	local lock = ServerStorage:FindFirstChild("__Rojo_SessionLock")
 	if not lock then
 		-- No lock is made yet, so it is available
